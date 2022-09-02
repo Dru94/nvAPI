@@ -33,6 +33,7 @@ class Order(models.Model):
     level = models.CharField(max_length=500, default="")
     order_quantity = models.PositiveIntegerField()
     teachers_quantity = models.PositiveIntegerField(default=0)
+    cleared = models.BooleanField(default=False, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
